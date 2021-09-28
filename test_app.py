@@ -58,19 +58,5 @@ def test_pred_IrisVersicolour():
         assert response.status_code == 200
         json_data = response.json()
         assert json_data['flower_class'] == "Iris Versicolour"
-        
-# test retrain method of model to retrain with new data
-def test_feedback_loop():
-
-   payload = {
-            "sepal_length":4.9, 
-            "sepal_width":3, 
-            "petal_length":1.4,
-            "petal_width":0.2,
-            "flower_class":"Iris Setosa"
-            }
-   
-   with TestClient(app) as client:
-        response = client.post("/feedback_loop", json=payload)
-        assert response.status_code == 200
+ 
    
