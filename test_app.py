@@ -59,7 +59,7 @@ def test_pred_IrisVersicolour():
         json_data = response.json()
         assert json_data['flower_class'] == "Iris Versicolour"
         
-# test retrain method
+# test retrain method of model to retrain with new data
 def test_feedback_loop():
 
    payload={
