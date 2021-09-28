@@ -63,10 +63,10 @@ def test_pred_IrisVersicolour():
 def test_feedback_loop():
 
    payload = {
-            "sepal_length":5.0, 
-            "sepal_width":5.0, 
-            "petal_length":5.0,
-            "petal_width":5.0,
+            "sepal_length":4.9, 
+            "sepal_width":3, 
+            "petal_length":1.4,
+            "petal_width":0.2,
             "flower_class":"Iris Setosa"
             }
    
