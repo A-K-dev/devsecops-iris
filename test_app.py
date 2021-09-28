@@ -62,15 +62,15 @@ def test_pred_IrisVersicolour():
 # test retrain method of model to retrain with new data
 def test_feedback_loop():
 
-   payload={
-            "sepal_length":5, 
-            "sepal_width":5, 
-            "petal_length":5,
-            "petal_width":5,
+   payload = {
+            "sepal_length":5.0, 
+            "sepal_width":5.0, 
+            "petal_length":5.0,
+            "petal_width":5.0,
             "flower_class":"Iris Setosa"
             }
    
    with TestClient(app) as client:
-        res = client.post("/feedback_loop", json=payload)
-        assert res.status_code == 200
+        response = client.post("/feedback_loop", json=payload)
+        assert response.status_code == 200
    
